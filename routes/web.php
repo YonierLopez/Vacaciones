@@ -10,6 +10,7 @@ use App\Http\Controllers\BillingController;
 use App\Http\Controllers\PaymentMethodController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PageController;
 
 // Ruta principal que carga la vista welcome (por defecto)
 Route::get('/', function () {
@@ -30,4 +31,9 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');// Ru
 Route::get('/register', [RegisterController::class, 'index'])->name('register.index'); // Mostrar el formulario
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store'); // Procesar el formulario 
 
+
+Route::get('/', [PageController::class, 'inicio'])->name('inicio');
+Route::get('/sobre-nosotros', [PageController::class, 'sobreNosotros'])->name('sobreNosotros');
+Route::get('/planes-turisticos', [PageController::class, 'planesTuristicos'])->name('planesTuristicos');
+Route::get('/contacto', [PageController::class, 'contacto'])->name('contacto');
 
