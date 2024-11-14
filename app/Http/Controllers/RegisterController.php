@@ -9,9 +9,9 @@ class RegisterController extends Controller
     /**
      * Muestra el formulario de registro.
      */
-    public function index()
+    public function register()
     {
-        return view('register.index'); // Asegúrate de tener la vista 'register.index'
+        return view('users.register'); // Asegúrate de tener la vista 'register.index'
     }
 
     /**
